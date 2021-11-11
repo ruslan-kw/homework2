@@ -12,3 +12,13 @@
 # Texas, New York,Indiana
 # Результат виконання:
 # Cherkassy, Lviv, Paris, Tokyo, Toronto, New York, Texas, Indiana
+
+
+puts 'Enter your favorite cities: '                 # просимо користувача ввести свої улюблені міста
+favorite_cities = gets.chomp.split(",").sort        # за допомогою методу split розбиваємо строку в масив з заданим роздільником "," та сортуємо
+puts 'Enter the cities you hate the most: '         # просимо користувача ввести свої найненавистніші 
+hated_cities = gets.chomp.split(",").sort           # розбиваємо за аналогією з попередньою строкою
+all_cities = favorite_cities + hated_cities         # ствоюємо нову змінну all_cities, що містить в собі значення з попередніх змінних
+puts all_cities.map { |i| i.strip }.join(', ')      # виводимо значення зі змінної all_cities, за допомогою методу strip 
+                                                    # прибераємо пробіли попереду та позаду значень та використовуємо метод join 
+                                                    # щоб створити розділений комами рядок всіх значень масиву
