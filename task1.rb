@@ -9,3 +9,20 @@
 # Введіть назву тварини:                             |   Введіть назву тварини:
 # супер_вЕдміДь                                      |   сУпер_веДмідь
 # Супер_ведмідь говорить - ведмежачий звук           |   Супер_ведмідь говорить - ведмежачий звук
+
+puts "Enter the name of the animal"             # просимо користувача ввести назву тварини
+animal = gets.chomp.downcase                    # створюмо змінну animal, для якої беремо значення, введені користувачем, 
+                                                # та приводимо всі символи до нижнього регістру 
+
+case animal                                     # за допомогою оперетора case перебираємо значення в змінній animal
+when 'cat'                                      # 
+    puts "#{animal.capitalize} talk Meow!"      # якщо значення cat, виводимо текст, при цьому перший символ змінної приводимо до верхнього регістру
+when 'dog'                                      # далі за аналогією..
+    puts "#{animal.capitalize} talk Gav!"       
+when 'horse'                                    
+    puts "#{animal.capitalize} talk Pfrr!"      
+when 'bird'                                     
+    puts "#{animal.capitalize} talk Chik-chik!" 
+else                                            
+    puts "The #{animal}'s was not found"		# якщо значення змінної не покривається програмою, виводимо в консоль відповідне повідомлення 
+end
